@@ -164,22 +164,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <p><h4>
-                       Орысша аудармасы
-                    </h4></p>
-                    <p><i>твердый</i>
-                    </p>
 
-                    <br>
-                    <p><h4>
-                       Ағылшынша аудармасы
-                    </h4></p>
-                    <p><i>solid</i>
-                    </p>
-                </div>
             </div>
         </section>
+
+        <div class="row">
+            <p><h4>
+                Орысша аудармасы
+            </h4></p>
+            <p><i>твердый</i>
+            </p>
+
+            <br>
+            <p><h4>
+                Ағылшынша аудармасы
+            </h4></p>
+            <p><i>solid</i>
+            </p>
+        </div>
+
+
         <!-- End feature Area -->
 
         <!-- start footer Area -->
