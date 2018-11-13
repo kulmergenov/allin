@@ -164,6 +164,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <h4>
+                        <a href="#">Орысша аудармасы</a>
+                    </h4>
+                    <p>твердый
+                    </p>
+                </div>
             </div>
         </section>
         <!-- End feature Area -->
