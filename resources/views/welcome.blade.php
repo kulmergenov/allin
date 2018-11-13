@@ -65,7 +65,7 @@
 
         <!-- start banner Area -->
         <section class="banner-area relative" id="home">
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="single-feature d-flex flex-row pb-30">
@@ -77,7 +77,7 @@
                     <div class="col-lg-6">
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="desc">
-                                <h4 class="text-uppercase">24/7 emergency</h4>
+                                <h4 class="text-uppercase">24/7 fdgfdgfdgfdgfdgfd</h4>
                                 <p>
                                     inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
                                 </p>
