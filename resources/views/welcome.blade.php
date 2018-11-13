@@ -107,7 +107,7 @@
                         </div>
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="icon">
-                                <span class="lnr lnr-checkmark-circle"></span>
+                                <span class="lnr lnr-cross-circle"></span>
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Терминдік мағынасы</h4>
