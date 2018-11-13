@@ -99,7 +99,7 @@
                                 <span class="lnr lnr-rocket"></span>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">24/7 emergency</h4>
+                                <h4 class="text-uppercase">Этимологиясы</h4>
                                 <p>
                                     inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
                                 </p>
