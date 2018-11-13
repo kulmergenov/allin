@@ -110,7 +110,7 @@
                                 <span class="lnr lnr-chart-bars"></span>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">X-Ray Service</h4>
+                                <h4 class="text-uppercase">Терминдік мағынасы</h4>
                                 <p>
                                     inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
                                 </p>
@@ -121,7 +121,7 @@
                                 <span class="lnr lnr-bug"></span>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Intensive Care</h4>
+                                <h4 class="text-uppercase">Орфографиясы</h4>
                                 <p>
                                     inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
                                 </p>
@@ -134,7 +134,7 @@
                                 <span class="lnr lnr-heart-pulse"></span>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">24/7 emergency</h4>
+                                <h4 class="text-uppercase">Антонимі</h4>
                                 <p>
                                     inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
                                 </p>
@@ -145,7 +145,7 @@
                                 <span class="lnr lnr-paw"></span>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">X-Ray Service</h4>
+                                <h4 class="text-uppercase">Синонимі</h4>
                                 <p>
                                     inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
                                 </p>
@@ -156,7 +156,7 @@
                                 <span class="lnr lnr-users"></span>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Intensive Care</h4>
+                                <h4 class="text-uppercase">Омонимі</h4>
                                 <p>
                                     inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
                                 </p>
