@@ -170,17 +170,79 @@
         <div class="container">
             <div class="row">
                 <p><h4>
-                    Орысша аудармасы
+                    Орыс тілінде
                 </h4></p>
                 <p><i class="text-black-50">твердый</i>
                 </p>
 
                 <br>
                 <p><h4>
-                    Ағылшынша аудармасы
+                    Ағылшын тілінде
                 </h4></p>
                 <p><i class="text-black-50">solid</i>
                 </p>
+
+                <br>
+                <p><h4>
+                    Қытай тілінде
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+
+                <br>
+                <p><h4>
+                    Түрік тілінде
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+
+                <br>
+                <p><h4>
+                    Неміс тілінде
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+
+                <br>
+                <p><h4>
+                    Қырғыз тілінде
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+
+                <br>
+                <p><h4>
+                    Өзбек  тілінде
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+
+
+                <br>
+                <p><h4>
+                    Әзірбайжан  тілінде
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+
+
+                <br>
+                <p><h4>
+                    Түркімен тілінде
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+
+
+
+                7.3 қытай тілінде
+                7.4 түрік тілінде
+                7.5 неміс тілінде
+                7.6 қырғыз тілінде
+                7.7 өзбек тілінде
+                7.8 әзірбайжан тілінде
+                7.9 түркімен тілінде
+
             </div>
         </div>
 
