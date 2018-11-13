@@ -50,10 +50,10 @@
                         </div>
                         <div class="main-menubar d-flex align-items-center">
                             <nav class="hide">
-                                <a href="#home">Home</a>
-                                <a href="#service">Services</a>
-                                <a href="#appoinment">Appoinment</a>
-                                <a href="#consultant">Consultants</a>
+                                <a href="#home">Басты бет</a>
+                                <a href="#service">Қызметтер</a>
+                                <a href="#appoinment">Көмек</a>
+                                <a href="#consultant">Байланыс</a>
                             </nav>
                             <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
                         </div>
