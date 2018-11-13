@@ -96,34 +96,34 @@
                     <div class="col-lg-6">
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="icon">
-                                <span class="lnr lnr-rocket"></span>
+                                <span class="lnr lnr-checkmark-circle"></span>
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Этимологиясы</h4>
                                 <p>
-                                    inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
+                                    Мәтін...
                                 </p>
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="icon">
-                                <span class="lnr lnr-chart-bars"></span>
+                                <span class="lnr lnr-checkmark-circle"></span>
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Терминдік мағынасы</h4>
                                 <p>
-                                    inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
+                                    Мәтін...
                                 </p>
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row">
                             <div class="icon">
-                                <span class="lnr lnr-bug"></span>
+                                <span class="lnr lnr-checkmark-circle"></span>
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Орфографиясы</h4>
                                 <p>
-                                    inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
+                                    Мәтін....
                                 </p>
                             </div>
                         </div>
@@ -131,34 +131,34 @@
                     <div class="col-lg-6">
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="icon">
-                                <span class="lnr lnr-heart-pulse"></span>
+                                <span class="lnr lnr-checkmark-circle"></span>
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Антонимі</h4>
                                 <p>
-                                    inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
+                                жұмсақ
                                 </p>
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="icon">
-                                <span class="lnr lnr-paw"></span>
+                                <span class="lnr lnr-checkmark-circle"></span>
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Синонимі</h4>
                                 <p>
-                                    inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
+                                    берік
                                 </p>
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row">
                             <div class="icon">
-                                <span class="lnr lnr-users"></span>
+                                <span class="lnr lnr-checkmark-circle"></span>
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Омонимі</h4>
                                 <p>
-                                    inappropriate behavior is often laughed off as “boys will be boys,” <br> women face higher conduct women face higher conduct.
+                                    кепті, қатайды
                                 </p>
                             </div>
                         </div>
