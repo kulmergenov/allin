@@ -167,20 +167,21 @@
 
             </div>
         </section>
+        <div class="container">
+            <div class="row">
+                <p><h4>
+                    Орысша аудармасы
+                </h4></p>
+                <p><i class="text-black-50">твердый</i>
+                </p>
 
-        <div class="row">
-            <p><h4>
-                Орысша аудармасы
-            </h4></p>
-            <p><i>твердый</i>
-            </p>
-
-            <br>
-            <p><h4>
-                Ағылшынша аудармасы
-            </h4></p>
-            <p><i>solid</i>
-            </p>
+                <br>
+                <p><h4>
+                    Ағылшынша аудармасы
+                </h4></p>
+                <p><i class="text-black-50">solid</i>
+                </p>
+            </div>
         </div>
 
 
