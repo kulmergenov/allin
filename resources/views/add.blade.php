@@ -74,6 +74,9 @@
                             <div class="desc w-100">
                                 <textarea class="fullwidth w-100" rows="5" name="title_kz" id="title_kz"></textarea>
                             </div>
+                            <div class="desc w-100">
+                                <textarea class="fullwidth w-100" rows="5" name="description" id="description"></textarea>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">

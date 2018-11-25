@@ -31,6 +31,7 @@ class HomeController extends Controller
         if (Auth::user()->admin == 1) {
             $prepare = new Library();
             $prepare->title_kz = $request['title_kz'];
+            $prepare->description = $request['description'];
             $prepare->title_ru = $request['title_ru'];
             $prepare->title_en = $request['title_en'];
             $prepare->title_cn = $request['title_cn'];
