@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="/assets/css/magnific-popup.css">
     <link rel="stylesheet" href="/assets/css/nice-select.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -34,7 +36,7 @@
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
-                <a href="{{ url('/home') }}">Home</a>
+                <a href="{{ url('/add') }}">Home</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
                 <a href="{{ route('register') }}">Register</a>
@@ -55,9 +57,13 @@
                 <div class="main-menubar d-flex align-items-center">
                     <nav class="hide">
                         <a href="#home">Басты бет</a>
-                        <a href="#service">Қызметтер</a>
-                        <a href="#appoinment">Көмек</a>
-                        <a href="#consultant">Байланыс</a>
+                        <a href="/list">Тізім</a>
+                        @auth
+                            <a href="{{ url('/add') }}">Қосу</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('register') }}">Register</a>
+                        @endauth
                     </nav>
                     <div class="menu-bar"><i class="fas fa-bars text-dark"></i></div>
                 </div>
@@ -67,16 +73,22 @@
 </header>
 <!-- End Header Area -->
 
-{!! Form::open((['url' => '/search','method' => 'get'])) !!}
+{!! Form::open((['url' => 'HomeController/savelib','method' => 'post'])) !!}
 <!-- start banner Area -->
 <section class="relative" id="home">
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-6">
+                Сөз
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="desc w-100">
                         <textarea class="fullwidth w-100" rows="5" name="title_kz" id="title_kz">{{ @$newPrepare->title_kz }}</textarea>
-                        <p class="fullwidth w-100" rows="5" value="{{ @$newPrepare->description }}"></p>
+                    </div>
+                </div>
+                Түсініктемесі
+                <div class="single-feature d-flex flex-row pb-30">
+                    <div class="desc w-100">
+                        <textarea class="fullwidth w-100" rows="5" name="description" id="description">{{ @$newPrepare->description }}</textarea>
                     </div>
                 </div>
             </div>
@@ -87,6 +99,9 @@
                         <div class="row mt-4">
                             <div class="icon ml-3 pl-5">
                                 <button type="submit" name="search" value="OK" class="btn btn-default"><i class="fas fa-search fa-2x text-dark"></i></button>
+                            </div>
+                            <div class="icon">
+                                <button type="submit" name="save" value="OK" class="btn btn-default"><i class="fas fa-save fa-2x text-dark"></i></button>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-broom fa-2x text-dark"></i>
@@ -117,7 +132,9 @@
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Этимологиясы</h4>
-                        <p>{{ @$newPrepare->etimology }}</p>
+                        <input class="form-control" name="etimology" id="etimology" value="{{ @$newPrepare->etimology }}">
+                        <input class="form-control" name="wordid" id="wordid" type="hidden" value="{{ @$newPrepare->id }}">
+                        <p></p>
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
@@ -126,7 +143,7 @@
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Терминдік мағынасы</h4>
-                        <p>{{ @$newPrepare->termin }}</p>
+                        <input class="form-control" name="termin" id="termin" value="{{ @$newPrepare->termin }}">
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row">
@@ -135,7 +152,7 @@
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Орфографиясы</h4>
-                        <p>{{ @$newPrepare->orphography }}</p>
+                        <input class="form-control" name="orphography" id="orphography" value="{{ @$newPrepare->orphography }}">
                     </div>
                 </div>
             </div>
@@ -147,12 +164,12 @@
                     <div class="desc">
                         <h4 class="text-uppercase">Антонимі</h4>
                         <ul>
-                            @if (!empty(@$antonym))
-                                @foreach (@$antonym as $k => $v)
-                                    <li><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
-                                @endforeach
-                            @endif
+                        @foreach ($antonym as $k => $v)
+                                <li>{{ $v->title_kz }}</li>
+                        @endforeach
                         </ul>
+                        <input class="form-control" name="antonym" id="antonym" type="text">
+                        <input class="form-control" name="antonymId" id="antonymId" type="hidden">
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
@@ -162,12 +179,12 @@
                     <div class="desc">
                         <h4 class="text-uppercase">Синонимі</h4>
                         <ul>
-                            @if (!empty(@$synonym))
-                            @foreach (@$synonym as $k => $v)
-                                    <li><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
+                            @foreach ($synonym as $k => $v)
+                                <li>{{ $v->title_kz }}</li>
                             @endforeach
-                            @endif
                         </ul>
+                        <input class="form-control" name="synonym" id="synonym" type="text">
+                        <input class="form-control" name="synonymId" id="synonymId" type="hidden">
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row">
@@ -177,12 +194,12 @@
                     <div class="desc">
                         <h4 class="text-uppercase">Омонимі</h4>
                         <ul>
-                            @if (!empty(@$omonym))
-                            @foreach (@$omonym as $k => $v)
-                                <li><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
+                            @foreach ($omonym as $k => $v)
+                                <li>{{ $v->title_kz }}</li>
                             @endforeach
-                            @endif
                         </ul>
+                        <input class="form-control" name="omonym" id="omonym" type="text">
+                        <input class="form-control" name="omonymId" id="omonymId" type="hidden">
                     </div>
                 </div>
             </div>
@@ -197,7 +214,7 @@
             Орыс тілінде
         </h4></p><br>
         <p><i class="text-dark">
-        {{ @$newPrepare->title_ru }}</i>
+                <input class="form-control" name="title_ru" id="title_ru" value="{{ @$newPrepare->title_ru }}"> </i>
         </p>
         </div>
 
@@ -207,7 +224,7 @@
             Ағылшын тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_en }}</i>
+                <input class="form-control" name="title_en" id="title_en" value="{{ @$newPrepare->title_en }}"> </i>
         </p>
         </div>
 
@@ -217,7 +234,7 @@
             Қытай тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_cn }}</i>
+                <input class="form-control" name="title_cn" id="title_cn" value="{{ @$newPrepare->title_cn }}"> </i>
         </p>
         </div>
 
@@ -227,7 +244,7 @@
             Түрік тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_tr }}</i>
+                <input class="form-control" name="title_tr" id="title_tr" value="{{ @$newPrepare->title_tr }}"> </i>
         </p>
         </div>
 
@@ -237,7 +254,7 @@
             Неміс тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_de }}</i>
+                <input class="form-control" name="title_de" id="title_de" value="{{ @$newPrepare->title_de }}"> </i>
         </p>
         </div>
 
@@ -247,7 +264,7 @@
             Қырғыз тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_kg }}</i>
+                <input class="form-control" name="title_kg" id="title_kg" value="{{ @$newPrepare->title_kg }}"> </i>
         </p>
         </div>
 
@@ -257,7 +274,7 @@
             Өзбек  тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_uz }}</i>
+                <input class="form-control" name="title_uz" id="title_uz" value="{{ @$newPrepare->title_uz }}"> </i>
         </p>
         </div>
 
@@ -267,7 +284,7 @@
             Әзірбайжан  тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_az }}</i>
+                <input class="form-control" name="title_az" id="title_az" value="{{ @$newPrepare->title_az }}"> </i>
         </p>
         </div>
 
@@ -278,19 +295,23 @@
             Түркімен тілінде
         </h4></p><br>
         <p><i class="text-dark">
-                {{ @$newPrepare->title_tm }}</i>
+                <input class="form-control" name="title_tm" id="title_tm" value="{{ @$newPrepare->title_tm }}"> </i>
         </p>
         </div>
 
 
     </div>
+    <div class="pull-right">
+        <button type="submit" name="save" value="OK" class="btn btn-primary">Сақтау</button>
+    </div>
+    <br><br><hr>
 </div>
 
 
 <!-- End feature Area -->
 
 {!! Form::close() !!}
-<!-- start footer Area -->
+{{--<!-- start footer Area -->
 <footer class="footer-area section-gap">
     <div class="container">
         <div class="row">
@@ -356,7 +377,7 @@
         </div>
     </div>
 </footer>
-<!-- End footer Area -->
+<!-- End footer Area -->--}}
 
 <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
@@ -370,6 +391,32 @@
 <script src="/assets/js/waypoints.min.js"></script>
 <script src="/assets/js/jquery.counterup.min.js"></script>
 <script src="/assets/js/main.js"></script>
+<script>
+    $('#antonym').autocomplete({
+        source: '{!! URL::route('autocompleteAntonym') !!}',
+        minLenght: 1,
+        autoFocus: true,
+        select: function (e,ui) {
+            $('#antonymId').val(ui.item.id);
+        }
+    });
+    $('#synonym').autocomplete({
+        source: '{!! URL::route('autocompleteSynonym') !!}',
+        minLenght: 1,
+        autoFocus: true,
+        select: function (e,ui) {
+            $('#synonymId').val(ui.item.id);
+        }
+    });
+    $('#omonym').autocomplete({
+        source: '{!! URL::route('autocompleteOmonym') !!}',
+        minLenght: 1,
+        autoFocus: true,
+        select: function (e,ui) {
+            $('#omonymId').val(ui.item.id);
+        }
+    });
+</script>
 
 </body>
 </html>

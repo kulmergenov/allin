@@ -19,6 +19,10 @@
         <link rel="stylesheet" href="/css/all.css">
         <link rel="stylesheet" href="/css/regular.css">
         <link rel="stylesheet" href="/css/fontawesome.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+
         <link rel="stylesheet" href="/assets/css/magnific-popup.css">
         <link rel="stylesheet" href="/assets/css/nice-select.css">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -54,9 +58,13 @@
                         <div class="main-menubar d-flex align-items-center">
                             <nav class="hide">
                                 <a href="#home">Басты бет</a>
-                                <a href="#service">Қызметтер</a>
-                                <a href="#appoinment">Көмек</a>
-                                <a href="#consultant">Байланыс</a>
+                                <a href="/list">Тізім</a>
+                                @auth
+                                    <a href="{{ url('/add') }}">Қосу</a>
+                                @else
+                                    <a href="{{ route('login') }}">Login</a>
+                                    <a href="{{ route('register') }}">Register</a>
+                                @endauth
                             </nav>
                             <div class="menu-bar"><i class="fas fa-bars text-dark"></i></div>
                         </div>
@@ -71,11 +79,23 @@
         <section class="relative" id="home">
             <div class="container mt-5">
                 <div class="row">
+                    @if (!empty($success))
+                        <h1>{{$success}}</h1>
+                    @endif
+                    @if ($errors->any())
+                        <h4>{{$errors->first()}}</h4>
+                    @endif
+                </div>
+                <div class="row">
                     <div class="col-lg-6">
+                        Сөз
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="desc w-100">
                                 <textarea class="fullwidth w-100" rows="5" name="title_kz" id="title_kz"></textarea>
                             </div>
+                        </div>
+                        Түсініктемесі
+                        <div class="single-feature d-flex flex-row pb-30">
                             <div class="desc w-100">
                                 <textarea class="fullwidth w-100" rows="5" name="description" id="description"></textarea>
                             </div>
@@ -87,6 +107,12 @@
                                 <h4 class="text-uppercase">Әрекет</h4>
                                 <div class="row mt-4">
                                     <div class="icon ml-3 pl-5">
+                                        <button type="submit" name="search" value="OK" class="btn btn-default"><i class="fas fa-search fa-2x text-dark"></i></button>
+                                    </div>
+                                    <div class="icon">
+                                        <button class="btn btn-default"><i class="fas fa-save fa-2x text-dark"></i></button>
+                                    </div>
+                                    <div class="icon">
                                         <i class="fas fa-broom fa-2x text-dark"></i>
                                     </div>
                                     <div class="icon">
@@ -145,6 +171,7 @@
                             <div class="desc">
                                 <h4 class="text-uppercase">Антонимі</h4>
                                 <input class="form-control" name="antonym" id="antonym" type="text">
+                                <input class="form-control" name="antonymId" id="antonymId" type="hidden">
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row pb-30">
@@ -153,7 +180,8 @@
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Синонимі</h4>
-                                <input class="form-control" name="synonym" id="synonym">
+                                <input class="form-control" name="synonym" id="synonym" type="text">
+                                <input class="form-control" name="synonymId" id="synonymId" type="hidden">
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row">
@@ -162,7 +190,8 @@
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Омонимі</h4>
-                                <input class="form-control" name="omonym" id="omonym">
+                                <input class="form-control" name="omonym" id="omonym" type="text">
+                                <input class="form-control" name="omonymId" id="omonymId" type="hidden">
                             </div>
                         </div>
                     </div>
@@ -250,7 +279,7 @@
 
         <!-- End feature Area -->
         {!! Form::close() !!}
-        <!-- start footer Area -->
+        {{--<!-- start footer Area -->
         <footer class="footer-area section-gap">
             <div class="container">
                 <div class="row">
@@ -315,7 +344,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer>--}}
         <!-- End footer Area -->
 
         <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
@@ -336,8 +365,23 @@
             minLenght: 1,
             autoFocus: true,
             select: function (e,ui) {
-               alert(ui);
-                
+               $('#antonymId').val(ui.item.id);
+            }
+        });
+        $('#synonym').autocomplete({
+           source: '{!! URL::route('autocompleteSynonym') !!}',
+            minLenght: 1,
+            autoFocus: true,
+            select: function (e,ui) {
+                $('#synonymId').val(ui.item.id);
+            }
+        });
+        $('#omonym').autocomplete({
+           source: '{!! URL::route('autocompleteOmonym') !!}',
+            minLenght: 1,
+            autoFocus: true,
+            select: function (e,ui) {
+                $('#omonymId').val(ui.item.id);
             }
         });
     </script>
