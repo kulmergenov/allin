@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('HomeController/savelib', 'HomeController@savelib')->name('savelib');
+Route::get('/autocompleteAntonym', array('as'=>'autocompleteAntonym','uses'=>'HomeController@autocompleteAntonym'));

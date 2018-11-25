@@ -22,6 +22,8 @@
         <link rel="stylesheet" href="/assets/css/magnific-popup.css">
         <link rel="stylesheet" href="/assets/css/nice-select.css">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <link rel="stylesheet" href="/assets/css/bootstrap.css">
         <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -142,7 +144,7 @@
                             </div>
                             <div class="desc">
                                 <h4 class="text-uppercase">Антонимі</h4>
-                                <input class="form-control" name="antonym" id="antonym">
+                                <input class="form-control" name="antonym" id="antonym" type="text">
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row pb-30">
@@ -328,5 +330,16 @@
         <script src="/assets/js/waypoints.min.js"></script>
         <script src="/assets/js/jquery.counterup.min.js"></script>
         <script src="/assets/js/main.js"></script>
+    <script>
+        $('#antonym').autocomplete({
+           source: '{!! URL::route('autocompleteAntonym') !!}',
+            minLenght: 1,
+            autoFocus: true,
+            select: function (e,ui) {
+               alert(ui);
+                
+            }
+        });
+    </script>
     </body>
 </html>

@@ -50,4 +50,14 @@ class HomeController extends Controller
             return redirect()->back()->with(403, 'Unauthorized action.');
         }
     }
+    public function autocompleteAntonym(Request $request){
+        $term = $request->term;
+        $data = Library::where('title_kz', 'LIKE', '%'.$term.'%')->take(10)->get();
+        $results = array();
+        foreach ($data as $key => $v) {
+            $results[] = ['id'=>$v->id,'value'=>$v->name];
+        }
+        return response()->json($results);
+    }
+
 }
