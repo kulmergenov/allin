@@ -64,6 +64,16 @@
                         @auth
                             <a href="/list">Тізім</a>
                             <a href="{{ url('/add') }}">Қосу</a>
+                            <a href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Шығу') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+
+
                         @else
                             <a href="{{ route('login') }}">Кіру</a>
                             {{--<a href="{{ route('register') }}">Register</a>--}}
