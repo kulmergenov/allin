@@ -53,11 +53,21 @@
                     <a href="#home"><!--img src="img/logo.png" alt=""--></a>
                 </div>
                 <div class="main-menubar d-flex align-items-center">
-                    <nav class="hide">
+                    {{--<nav class="hide">
                         <a href="#home">Басты бет</a>
                         <a href="#service">Қызметтер</a>
                         <a href="#appoinment">Көмек</a>
                         <a href="#consultant">Байланыс</a>
+                    </nav>--}}
+                    <nav class="hide">
+                        <a href="#home">Басты бет</a>
+                        @auth
+                            <a href="/list">Тізім</a>
+                            <a href="{{ url('/add') }}">Қосу</a>
+                        @else
+                            <a href="{{ route('login') }}">Кіру</a>
+                            {{--<a href="{{ route('register') }}">Register</a>--}}
+                        @endauth
                     </nav>
                     <div class="menu-bar"><i class="fas fa-bars text-dark"></i></div>
                 </div>
@@ -76,7 +86,11 @@
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="desc w-100">
                         <textarea class="fullwidth w-100" rows="5" name="title_kz" id="title_kz">{{ @$newPrepare->title_kz }}</textarea>
-                        <p class="fullwidth w-100" rows="5" value="{{ @$newPrepare->description }}"></p>
+                    </div>
+                </div>
+                <div class="single-feature d-flex flex-row pb-30">
+                    <div class="desc w-100">
+                        <i class="text-dark">{{ @$newPrepare->description }}</i>
                     </div>
                 </div>
             </div>
@@ -113,7 +127,7 @@
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-check-circle fa-2x text-success"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Этимологиясы</h4>
@@ -122,7 +136,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-check-circle fa-2x text-success"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->termin) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Терминдік мағынасы</h4>
@@ -131,7 +145,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row">
                     <div class="icon">
-                        <i class="far fa-check-circle fa-2x text-success"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->orphography) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Орфографиясы</h4>
@@ -142,7 +156,7 @@
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-check-circle fa-2x text-success"></i>
+                        <i class="far fa-2x {{ (!is_null(@$antonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Антонимі</h4>
@@ -157,7 +171,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-check-circle fa-2x text-success"></i>
+                        <i class="far fa-2x {{ (!is_null(@$synonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Синонимі</h4>
@@ -172,7 +186,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row">
                     <div class="icon">
-                        <i class="far fa-check-circle fa-2x text-success"></i>
+                        <i class="far fa-2x {{ (!is_null(@$omonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
                     </div>
                     <div class="desc">
                         <h4 class="text-uppercase">Омонимі</h4>
@@ -290,6 +304,11 @@
 <!-- End feature Area -->
 
 {!! Form::close() !!}
+
+<br>
+<br>
+<hr>
+{{--
 <!-- start footer Area -->
 <footer class="footer-area section-gap">
     <div class="container">
@@ -357,6 +376,7 @@
     </div>
 </footer>
 <!-- End footer Area -->
+--}}
 
 <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

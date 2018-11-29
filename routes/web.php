@@ -21,7 +21,7 @@ Route::get('/add', 'HomeController@index')->name('add');
 Route::get('/edit/{id}', 'HomeController@edit')->name('edit');
 Route::post('HomeController/savelib', 'HomeController@savelib')->name('savelib');
 Route::get('/list', 'HomeController@list')->name('list');
-Route::get('/search', 'HomeController@search')->name('search');
+Route::get('/search', 'SearchController@search')->name('search');
 Route::get('/autocompleteAntonym', array('as'=>'autocompleteAntonym','uses'=>'HomeController@autocompleteAntonym'));
 Route::get('/autocompleteSynonym', array('as'=>'autocompleteSynonym','uses'=>'HomeController@autocompleteSynonym'));
 Route::get('/autocompleteOmonym', array('as'=>'autocompleteOmonym','uses'=>'HomeController@autocompleteOmonym'));

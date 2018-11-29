@@ -31,13 +31,6 @@ class HomeController extends Controller
     {
         return view('add');
     }
-    public function search(Request $request){
-        $newPrepare = Library::where('title_kz', 'LIKE', trim(@$request['title_kz']))->first();
-        $antonym = Relations::where('ida', @$newPrepare->id)->where('type',1)->leftjoin('library','library.id','=','relations.idb')->get();
-        $synonym = Relations::where('ida', @$newPrepare->id)->where('type',2)->leftjoin('library','library.id','=','relations.idb')->get();
-        $omonym = Relations::where('ida', @$newPrepare->id)->where('type',3)->leftjoin('library','library.id','=','relations.idb')->get();
-        return view('welcome', compact('newPrepare','antonym','synonym','omonym'));
-    }
     public function edit(Request $request){
         $newPrepare = Library::find( trim(@$request['id']));
         $antonym = Relations::where('ida', $newPrepare->id)->where('type',1)->leftjoin('library','library.id','=','relations.idb')->get();

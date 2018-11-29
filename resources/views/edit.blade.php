@@ -57,8 +57,8 @@
                 <div class="main-menubar d-flex align-items-center">
                     <nav class="hide">
                         <a href="#home">Басты бет</a>
-                        <a href="/list">Тізім</a>
                         @auth
+                            <a href="/list">Тізім</a>
                             <a href="{{ url('/add') }}">Қосу</a>
                         @else
                             <a href="{{ route('login') }}">Login</a>
