@@ -90,7 +90,7 @@
 {!! Form::open((['url' => '/search','method' => 'get'])) !!}
 <!-- start banner Area -->
 <section class="relative" id="home">
-    <div class="container mt-5">
+    <div class="container mt-5" style="-webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
         <div class="row">
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
@@ -132,7 +132,7 @@
 
 <!-- Start feature Area -->
 <section class="feature-area py-4" id="service">
-    <div class="container">
+    <div class="container" style="-webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
         <div class="row">
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
@@ -214,7 +214,7 @@
 
     </div>
 </section>
-<div class="container">
+<div class="container" style="-webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
     <div class="row">
         <div class="col-3">
         <p><h4>
