@@ -120,7 +120,7 @@
                                     <div class="icon">
                                         <button class="btn btn-default"><i class="fas fa-save fa-2x text-dark"></i></button>
                                     </div>
-                                    <div class="icon">
+                                    {{--<div class="icon">
                                         <i class="fas fa-broom fa-2x text-dark"></i>
                                     </div>
                                     <div class="icon">
@@ -128,7 +128,7 @@
                                     </div>
                                     <div class="icon">
                                         <i class="fas fa-copy fa-2x text-dark"></i>
-                                    </div>
+                                    </div>--}}
                                 </div>
                             </div>
                         </div>
