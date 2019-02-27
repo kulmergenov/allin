@@ -148,7 +148,7 @@
                                 <i class="far fa-check-circle fa-2x text-success"></i>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Этимологиясы</h4>
+                                <p>Этимологиясы</p>
                                 <input class="form-control" name="etimology" id="etimology">
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                                 <i class="far fa-check-circle fa-2x text-success"></i>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Терминдік мағынасы</h4>
+                                <p>Терминдік мағынасы</p>
                                 <input class="form-control" name="termin" id="termin">
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                 <i class="far fa-check-circle fa-2x text-success"></i>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Орфографиясы</h4>
+                                <p>Орфографиясы</p>
                                 <input class="form-control" name="orphography" id="orphography">
                             </div>
                         </div>
@@ -177,7 +177,7 @@
                                 <i class="far fa-check-circle fa-2x text-success"></i>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Антонимі</h4>
+                                <p>Антонимі</p>
                                 <input class="form-control" name="antonym" id="antonym" type="text">
                                 <input class="form-control" name="antonymId" id="antonymId" type="hidden">
                             </div>
@@ -187,7 +187,7 @@
                                 <i class="far fa-check-circle fa-2x text-success"></i>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Синонимі</h4>
+                                <p>Синонимі</p>
                                 <input class="form-control" name="synonym" id="synonym" type="text">
                                 <input class="form-control" name="synonymId" id="synonymId" type="hidden">
                             </div>
@@ -197,7 +197,7 @@
                                 <i class="far fa-check-circle fa-2x text-success"></i>
                             </div>
                             <div class="desc">
-                                <h4 class="text-uppercase">Омонимі</h4>
+                                <p>Омонимі</p>
                                 <input class="form-control" name="omonym" id="omonym" type="text">
                                 <input class="form-control" name="omonymId" id="omonymId" type="hidden">
                             </div>

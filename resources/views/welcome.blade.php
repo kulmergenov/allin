@@ -137,28 +137,28 @@
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <h4 class="text-uppercase">Этимологиясы</h4>
+                        <p>Этимологиясы</p>
                         <p>{{ @$newPrepare->etimology }}</p>
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (isset($newPrepare->termin) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->termin) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <h4 class="text-uppercase">Терминдік мағынасы</h4>
+                        <p>Терминдік мағынасы</p>
                         <p>{{ @$newPrepare->termin }}</p>
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row">
                     <div class="icon">
-                        <i class="far fa-2x {{ (isset($newPrepare->orphography) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->orphography) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <h4 class="text-uppercase">Орфографиясы</h4>
+                        <p>Орфографиясы</p>
                         <p>{{ @$newPrepare->orphography }}</p>
                     </div>
                 </div>
@@ -166,10 +166,10 @@
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (!is_null(@$antonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
+                        <i class="far fa-2x {{ (!is_null(@$antonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <h4 class="text-uppercase">Антонимі</h4>
+                        <p>Антонимі</p>
                         <ul>
                             @if (!empty(@$antonym))
                                 @foreach (@$antonym as $k => $v)
@@ -181,10 +181,10 @@
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (!is_null(@$synonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
+                        <i class="far fa-2x {{ (!is_null(@$synonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <h4 class="text-uppercase">Синонимі</h4>
+                        <p>Синонимі</p>
                         <ul>
                             @if (!empty(@$synonym))
                             @foreach (@$synonym as $k => $v)
@@ -196,10 +196,10 @@
                 </div>
                 <div class="single-feature d-flex flex-row">
                     <div class="icon">
-                        <i class="far fa-2x {{ (!is_null(@$omonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle text-danger') }}"></i>
+                        <i class="far fa-2x {{ (!is_null(@$omonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <h4 class="text-uppercase">Омонимі</h4>
+                        <p>Омонимі</p>
                         <ul>
                             @if (!empty(@$omonym))
                             @foreach (@$omonym as $k => $v)
