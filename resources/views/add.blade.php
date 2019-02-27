@@ -144,27 +144,18 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="single-feature d-flex flex-row pb-30">
-                            <div class="icon">
-                                <i class="far fa-check-circle fa-2x text-success"></i>
-                            </div>
                             <div class="desc">
                                 <p>Этимологиясы</p>
                                 <input class="form-control" name="etimology" id="etimology">
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row pb-30">
-                            <div class="icon">
-                                <i class="far fa-check-circle fa-2x text-success"></i>
-                            </div>
                             <div class="desc">
                                 <p>Терминдік мағынасы</p>
                                 <input class="form-control" name="termin" id="termin">
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row">
-                            <div class="icon">
-                                <i class="far fa-check-circle fa-2x text-success"></i>
-                            </div>
                             <div class="desc">
                                 <p>Орфографиясы</p>
                                 <input class="form-control" name="orphography" id="orphography">
@@ -173,9 +164,6 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="single-feature d-flex flex-row pb-30">
-                            <div class="icon">
-                                <i class="far fa-check-circle fa-2x text-success"></i>
-                            </div>
                             <div class="desc">
                                 <p>Антонимі</p>
                                 <input class="form-control" name="antonym" id="antonym" type="text">
@@ -183,9 +171,6 @@
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row pb-30">
-                            <div class="icon">
-                                <i class="far fa-check-circle fa-2x text-success"></i>
-                            </div>
                             <div class="desc">
                                 <p>Синонимі</p>
                                 <input class="form-control" name="synonym" id="synonym" type="text">
@@ -193,9 +178,6 @@
                             </div>
                         </div>
                         <div class="single-feature d-flex flex-row">
-                            <div class="icon">
-                                <i class="far fa-check-circle fa-2x text-success"></i>
-                            </div>
                             <div class="desc">
                                 <p>Омонимі</p>
                                 <input class="form-control" name="omonym" id="omonym" type="text">
