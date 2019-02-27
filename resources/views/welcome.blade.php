@@ -87,11 +87,15 @@
 </header>
 <!-- End Header Area -->
 
-<div class="row">
-    <div class="col-lg-12 mt-3">
-        <div style="background-image: url(assets/img/orblue.png); background-repeat: repeat-x; height:25px; background-size: auto 100%"><div>
+<section class="feature-area py-0">
+    <div class="row mx-0">
+        <div class="col-lg-12 px-0 mt-3">
+            <div style="background-image: url(assets/img/orblue.png); background-repeat: repeat-x; height:25px; background-size: auto 100%">
+
             </div>
         </div>
+    </div>
+</section>
 {!! Form::open((['url' => '/search','method' => 'get'])) !!}
 <!-- start banner Area -->
 <section class="relative" id="home">
@@ -136,19 +140,24 @@
     </div>
 </section>
 <!-- End banner Area -->
-<div class="row">
-    <div class="col-lg-12 mt-3">
-        <div style="background-image: url(assets/img/orblue.png); background-repeat: repeat-x; height:25px; background-size: auto 100%"><div>
+
+<section class="feature-area py-0">
+    <div class="row mx-0">
+        <div class="col-lg-12 px-0 mt-3">
+            <div style="background-image: url(assets/img/orblue.png); background-repeat: repeat-x; height:25px; background-size: auto 100%">
+
+            </div>
+        </div>
     </div>
-</div>
+</section>
 <!-- Start feature Area -->
 <section class="feature-area py-4" id="service">
-    <div class="container" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
+    <div class="container" style="background-color: #FFF;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
         <div class="row">
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle text-success lighten-4' : 'fa-times-circle') }}"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle green-lighten-1' : 'fa-times-circle indigo-lighten-1') }}"></i>
                     </div>
                     <div class="desc">
                         <em>Этимологиясы</em>
@@ -157,7 +166,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (isset($newPrepare->termin) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->termin) ? 'fa-check-circle green-lighten-1' : 'fa-times-circle indigo-lighten-1') }}"></i>
                     </div>
                     <div class="desc">
                         <em>Терминдік мағынасы</em>
@@ -166,7 +175,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row">
                     <div class="icon">
-                        <i class="far fa-2x {{ (isset($newPrepare->orphography) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->orphography) ? 'fa-check-circle green-lighten-1' : 'fa-times-circle indigo-lighten-1') }}"></i>
                     </div>
                     <div class="desc">
                         <em>Орфографиясы</em>
@@ -177,7 +186,7 @@
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (!is_null(@$antonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
+                        <i class="far fa-2x {{ (!is_null(@$antonym[0]) ? 'fa-check-circle green-lighten-1' : 'fa-times-circle indigo-lighten-1') }}"></i>
                     </div>
                     <div class="desc">
                         <em>Антонимі</em>
@@ -192,7 +201,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (!is_null(@$synonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
+                        <i class="far fa-2x {{ (!is_null(@$synonym[0]) ? 'fa-check-circle green-lighten-1' : 'fa-times-circle indigo-lighten-1') }}"></i>
                     </div>
                     <div class="desc">
                         <em>Синонимі</em>
@@ -207,7 +216,7 @@
                 </div>
                 <div class="single-feature d-flex flex-row">
                     <div class="icon">
-                        <i class="far fa-2x {{ (!is_null(@$omonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
+                        <i class="far fa-2x {{ (!is_null(@$omonym[0]) ? 'fa-check-circle green-lighten-1' : 'fa-times-circle indigo-lighten-1') }}"></i>
                     </div>
                     <div class="desc">
                         <em>Омонимі</em>
@@ -225,7 +234,7 @@
 
     </div>
 </section>
-<div class="container" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
+<div class="container" style="background-color: #FFF;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
     <div class="row">
         <div class="col-3">
         <em>

@@ -51,11 +51,15 @@
 
 body {
   color: #777777;
+  background-color: #f9fbe7   ;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.625em;
   position: relative;
+}
+
+.container {
 }
 
 ol, ul {
@@ -2690,4 +2694,18 @@ p {
 
 .footer-text a, .footer-text i {
   color: #2482ff;
+}
+
+.green-lighten-1 {
+  color: #4db6ac;
+}
+
+.indigo-lighten-1 {
+  color: #9fa8da;
+}
+
+textarea {
+  padding-left: 10px;
+  text-transform: lowercase;
+  color:#3e2723;
 }
