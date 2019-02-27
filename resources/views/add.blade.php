@@ -192,68 +192,68 @@
         <div class="container">
             <div class="row">
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>Орыс тілінде</h4>
+                <p>Орыс тілінде</p>
                     <input class="form-control" name="title_ru" id="title_ru"></div>
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>Ағылшын тілінде</h4>
+                <p>Ағылшын тілінде</p>
                     <input class="form-control" name="title_en" id="title_en">
                 </div>
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>Қытай тілінде</h4>
+                <p>Қытай тілінде</p>
                     <input class="form-control" name="title_cn" id="title_cn">
                 </div>
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>
+                <p>
                     Түрік тілінде
-                </h4>
+                </p>
                     <input class="form-control" name="title_tr" id="title_tr">
                 </div>
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>
+                <p>
                     Неміс тілінде
-                </h4>
+                </p>
                     <input class="form-control" name="title_de" id="title_de">
                 </div>
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>
+                <p>
                     Қырғыз тілінде
-                </h4>
+                </p>
                     <input class="form-control" name="title_kg" id="title_kg">
                 </div>
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>
+                <p>
                     Өзбек  тілінде
-                </h4>
+                </p>
                     <input class="form-control" name="title_uz" id="title_uz">
                 </div>
 
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>
+                <p>
                     Әзірбайжан  тілінде
-                </h4>
+                </p>
                     <input class="form-control" name="title_az" id="title_az">
                 </div>
 
 
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <h4>
+                <p>
                     Түркімен тілінде
-                </h4>
+                </p>
                     <input class="form-control" name="title_tm" id="title_tm">
                 </div>
 
