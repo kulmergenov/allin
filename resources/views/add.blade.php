@@ -99,13 +99,13 @@
                         Сөз
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="desc w-100">
-                                <textarea class="fullwidth w-100" rows="5" name="title_kz" id="title_kz"></textarea>
+                                <textarea class="fullwidth w-100" rows="5" name="title_kz" id="title_kz" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;"></textarea>
                             </div>
                         </div>
                         Түсініктемесі
                         <div class="single-feature d-flex flex-row pb-30">
                             <div class="desc w-100">
-                                <textarea class="fullwidth w-100" rows="5" name="description" id="description"></textarea>
+                                <textarea class="fullwidth w-100" rows="5" name="description" id="description" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;"></textarea>
                             </div>
                         </div>
                     </div>
@@ -192,9 +192,9 @@
         <div class="container">
             <div class="row">
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
-                <p>Орыс тілінде</p>
-                    <input class="form-control" name="title_ru" id="title_ru"></div>
-
+                    <p>Орыс тілінде</p>
+                    <input class="form-control" name="title_ru" id="title_ru">
+                </div>
                 <br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
                 <p>Ағылшын тілінде</p>

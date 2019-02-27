@@ -90,29 +90,31 @@
 {!! Form::open((['url' => '/search','method' => 'get'])) !!}
 <!-- start banner Area -->
 <section class="relative" id="home">
-    <div class="container mt-5" style="-webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
+    <div class="container mt-5" >
         <div class="row">
-            <div class="col-lg-6">
-                <div class="single-feature d-flex flex-row pb-30">
+            <div class="col-lg-10 col-md-8 col-6">
+                <div class="single-feature d-flex flex-row pb-0">
                     <div class="desc w-100">
-                        <textarea class="fullwidth w-100" rows="5" name="title_kz" id="title_kz">{{ @$newPrepare->title_kz }}</textarea>
+                        <textarea class="fullwidth w-100 pb-0" rows="5" name="title_kz" id="title_kz" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">{{ @$newPrepare->title_kz }}</textarea>
                     </div>
                 </div>
-                <div class="single-feature d-flex flex-row pb-30">
+                @if (isset($newPrepare->description))
+                <div class="single-feature d-flex flex-row pb-0 pt-2">
                     <div class="desc w-100">
                         <i class="text-dark">{{ @$newPrepare->description }}</i>
                     </div>
                 </div>
+                @endif
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-2 col-md-4 col-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="desc">
                         <h4 class="text-uppercase">Әрекет</h4>
                         <div class="row mt-4">
-                            <div class="icon ml-3 pl-5">
+                            <div class="icon ml-0 pl-3">
                                 <button type="submit" name="search" value="OK" class="btn btn-default"><i class="fas fa-search fa-2x text-dark"></i></button>
                             </div>
-                            <div class="icon">
+                            {{--<div class="icon">
                                 <i class="fas fa-broom fa-2x text-dark"></i>
                             </div>
                             <div class="icon">
@@ -120,7 +122,7 @@
                             </div>
                             <div class="icon">
                                 <i class="fas fa-copy fa-2x text-dark"></i>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -140,7 +142,7 @@
                         <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <p>Этимологиясы</p>
+                        <em>Этимологиясы</em>
                         <p>{{ @$newPrepare->etimology }}</p>
                     </div>
                 </div>
@@ -149,7 +151,7 @@
                         <i class="far fa-2x {{ (isset($newPrepare->termin) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <p>Терминдік мағынасы</p>
+                        <em>Терминдік мағынасы</em>
                         <p>{{ @$newPrepare->termin }}</p>
                     </div>
                 </div>
@@ -158,7 +160,7 @@
                         <i class="far fa-2x {{ (isset($newPrepare->orphography) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <p>Орфографиясы</p>
+                        <em>Орфографиясы</em>
                         <p>{{ @$newPrepare->orphography }}</p>
                     </div>
                 </div>
@@ -169,7 +171,7 @@
                         <i class="far fa-2x {{ (!is_null(@$antonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <p>Антонимі</p>
+                        <em>Антонимі</em>
                         <ul>
                             @if (!empty(@$antonym))
                                 @foreach (@$antonym as $k => $v)
@@ -184,7 +186,7 @@
                         <i class="far fa-2x {{ (!is_null(@$synonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <p>Синонимі</p>
+                        <em>Синонимі</em>
                         <ul>
                             @if (!empty(@$synonym))
                             @foreach (@$synonym as $k => $v)
@@ -199,7 +201,7 @@
                         <i class="far fa-2x {{ (!is_null(@$omonym[0]) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
-                        <p>Омонимі</p>
+                        <em>Омонимі</em>
                         <ul>
                             @if (!empty(@$omonym))
                             @foreach (@$omonym as $k => $v)
@@ -217,9 +219,9 @@
 <div class="container" style="-webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
     <div class="row">
         <div class="col-3">
-        <p><h4>
+        <em>
             Орыс тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
         {{ @$newPrepare->title_ru }}</i>
         </p>
@@ -227,9 +229,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Ағылшын тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_en }}</i>
         </p>
@@ -237,9 +239,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Қытай тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_cn }}</i>
         </p>
@@ -247,9 +249,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Түрік тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_tr }}</i>
         </p>
@@ -257,9 +259,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Неміс тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_de }}</i>
         </p>
@@ -267,9 +269,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Қырғыз тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_kg }}</i>
         </p>
@@ -277,9 +279,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Өзбек  тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_uz }}</i>
         </p>
@@ -287,9 +289,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Әзірбайжан  тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_az }}</i>
         </p>
@@ -298,9 +300,9 @@
 
 
         <div class="col-3">
-        <p><h4>
+        <em>
             Түркімен тілінде
-        </h4></p><br>
+        </em><br>
         <p><i class="text-dark">
                 {{ @$newPrepare->title_tm }}</i>
         </p>
