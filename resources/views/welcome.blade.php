@@ -87,6 +87,11 @@
 </header>
 <!-- End Header Area -->
 
+<div class="row">
+    <div class="col-lg-12 mt-3">
+        <div style="background-image: url(assets/img/orblue.png); background-repeat: repeat-x; height:25px; background-size: auto 100%"><div>
+            </div>
+        </div>
 {!! Form::open((['url' => '/search','method' => 'get'])) !!}
 <!-- start banner Area -->
 <section class="relative" id="home">
@@ -95,7 +100,7 @@
             <div class="col-lg-10 col-md-8 col-6">
                 <div class="single-feature d-flex flex-row pb-0">
                     <div class="desc w-100">
-                        <textarea class="fullwidth w-100 pb-0" rows="5" name="title_kz" id="title_kz" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">{{ @$newPrepare->title_kz }}</textarea>
+                        <textarea class="fullwidth w-100 pb-0" rows="1" name="title_kz" id="title_kz" style="line-height:27pt;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">{{ @$newPrepare->title_kz }}</textarea>
                     </div>
                 </div>
                 @if (isset($newPrepare->description))
@@ -109,8 +114,8 @@
             <div class="col-lg-2 col-md-4 col-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="desc">
-                        <h4 class="text-uppercase">Әрекет</h4>
-                        <div class="row mt-4">
+                        <!--h4 class="text-uppercase">Әрекет</h4-->
+                        <div class="row mt-0">
                             <div class="icon ml-0 pl-3">
                                 <button type="submit" name="search" value="OK" class="btn btn-default"><i class="fas fa-search fa-2x text-dark"></i></button>
                             </div>
@@ -131,7 +136,11 @@
     </div>
 </section>
 <!-- End banner Area -->
-
+<div class="row">
+    <div class="col-lg-12 mt-3">
+        <div style="background-image: url(assets/img/orblue.png); background-repeat: repeat-x; height:25px; background-size: auto 100%"><div>
+    </div>
+</div>
 <!-- Start feature Area -->
 <section class="feature-area py-4" id="service">
     <div class="container" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);   padding: 20px;  box-shadow: 2px 5px 16px 0px #6b8eb6, 5px 5px 15px 5px rgba(0,0,0,0);">
