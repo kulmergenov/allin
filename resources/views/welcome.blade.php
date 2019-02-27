@@ -148,7 +148,7 @@
             <div class="col-lg-6">
                 <div class="single-feature d-flex flex-row pb-30">
                     <div class="icon">
-                        <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle text-success' : 'fa-times-circle') }}"></i>
+                        <i class="far fa-2x {{ (isset($newPrepare->etimology) ? 'fa-check-circle text-success lighten-4' : 'fa-times-circle') }}"></i>
                     </div>
                     <div class="desc">
                         <em>Этимологиясы</em>
