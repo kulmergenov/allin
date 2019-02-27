@@ -152,7 +152,7 @@
                     </div>
                     <div class="desc">
                         <em>Этимологиясы</em>
-                        <p>{{ @$newPrepare->etimology }}</p>
+                        <p class="text-lowercase">{{ @$newPrepare->etimology }}</p>
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row pb-30">
@@ -161,7 +161,7 @@
                     </div>
                     <div class="desc">
                         <em>Терминдік мағынасы</em>
-                        <p>{{ @$newPrepare->termin }}</p>
+                        <p class="text-lowercase">{{ @$newPrepare->termin }}</p>
                     </div>
                 </div>
                 <div class="single-feature d-flex flex-row">
@@ -170,7 +170,7 @@
                     </div>
                     <div class="desc">
                         <em>Орфографиясы</em>
-                        <p>{{ @$newPrepare->orphography }}</p>
+                        <p class="text-lowercase">{{ @$newPrepare->orphography }}</p>
                     </div>
                 </div>
             </div>
@@ -184,7 +184,7 @@
                         <ul>
                             @if (!empty(@$antonym))
                                 @foreach (@$antonym as $k => $v)
-                                    <li><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
+                                    <li class="text-lowercase"><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
                                 @endforeach
                             @endif
                         </ul>
@@ -199,7 +199,7 @@
                         <ul>
                             @if (!empty(@$synonym))
                             @foreach (@$synonym as $k => $v)
-                                    <li><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
+                                    <li class="text-lowercase"><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
                             @endforeach
                             @endif
                         </ul>
@@ -214,7 +214,7 @@
                         <ul>
                             @if (!empty(@$omonym))
                             @foreach (@$omonym as $k => $v)
-                                <li><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
+                                <li class="text-lowercase"><a href="search?title_kz={{ $v->title_kz }}&search=OK">{{ $v->title_kz }}</a></li>
                             @endforeach
                             @endif
                         </ul>
