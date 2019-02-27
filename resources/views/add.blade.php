@@ -215,7 +215,7 @@
                     <input class="form-control" name="title_tr" id="title_tr">
                 </div>
 
-                <br>
+                {{--<br>
                 <div class="single-feature d-flex flex-row pl-2 pb-2 form-group">
                 <p>
                     Неміс тілінде
@@ -255,7 +255,7 @@
                     Түркімен тілінде
                 </p>
                     <input class="form-control" name="title_tm" id="title_tm">
-                </div>
+                </div>--}}
 
 
             </div>

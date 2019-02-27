@@ -267,7 +267,7 @@
         </div>
 
 
-        <div class="col-3">
+        {{--<div class="col-3">
         <em>
             Неміс тілінде
         </em><br>
@@ -315,7 +315,7 @@
         <p><i class="text-dark">
                 {{ @$newPrepare->title_tm }}</i>
         </p>
-        </div>
+        </div>--}}
 
 
     </div>
